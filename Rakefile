@@ -5,3 +5,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 PhotoManager::Application.load_tasks
+
+if (Rails.env == "test" || Rails.env == "development")
+  MiniTest::Rails::Testing.default_tasks << "features"
+end
