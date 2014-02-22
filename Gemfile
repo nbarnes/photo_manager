@@ -6,10 +6,13 @@ gem 'pg'
 gem "minitest-rails"
 gem 'figaro'
 
-gem 'sass-rails',   '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
-gem 'uglifier', '>= 1.0.3'
+gem 'sass-rails'
+gem 'coffee-rails'
+gem 'uglifier'
 gem 'jquery-rails'
+
+gem 'acts-as-taggable-on'
+gem 'select2-rails'
 
 # Image uploading
 gem 'carrierwave'

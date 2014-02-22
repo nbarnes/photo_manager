@@ -13,12 +13,7 @@
     </div>
 
     <div class='photo_tags'><b>Tags:</b>
-      <% if false %>
-        <% photo.tags.each do |tag| %>
-          <%= tag.name %>
-          ,&nbsp;
-        <% end %>
-      <% end %>
+      <%= photo.tag_list %>
     </div>
 
     <%= link_to 'Show', photo %>
