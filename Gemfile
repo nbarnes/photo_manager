@@ -11,6 +11,9 @@ gem 'coffee-rails', '~> 3.2.1'
 gem 'uglifier', '>= 1.0.3'
 gem 'jquery-rails'
 
+# Image uploading
+gem 'carrierwave'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-debugger'

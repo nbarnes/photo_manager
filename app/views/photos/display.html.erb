@@ -1,20 +1,31 @@
-<h1>Listing photos</h1>
-
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<h1>Displaying photos</h1>
 
 <% @photos.each do |photo| %>
-  <tr>
-    <td><%= link_to 'Show', photo %></td>
-    <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-    <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+
+    <div class='photo_title'>
+      <b><%= photo.title %></b>
+    </div>
+
+    <div>
+      <% if photo.image != "" %>
+        <%= image_tag photo.image, size: '210x180', class: 'photo_image' %>
+      <% end %>
+    </div>
+
+    <div class='photo_tags'><b>Tags:</b>
+      <% if false %>
+        <% photo.tags.each do |tag| %>
+          <%= tag.name %>
+          ,&nbsp;
+        <% end %>
+      <% end %>
+    </div>
+
+    <%= link_to 'Show', photo %>
+    <%= link_to 'Edit', edit_photo_path(photo) %>
+    <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <br />
 <% end %>
-</table>
 
 <br />
 
