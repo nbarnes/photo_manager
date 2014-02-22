@@ -1,0 +1,14 @@
+
+<div class='photo_title'>
+  <b><%= photo.title %></b>
+</div>
+
+<div>
+  <% if photo.image != "" %>
+    <%= image_tag photo.image, size: '384x240', class: 'photo_image' %>
+  <% end %>
+</div>
+
+<div class='photo_tags'><b>Tags:</b>
+  <%= photo.tag_list %>
+</div>
