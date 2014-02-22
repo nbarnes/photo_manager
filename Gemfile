@@ -13,6 +13,8 @@ gem 'jquery-rails'
 
 # Image uploading
 gem 'carrierwave'
+gem 'carrierwave-postgresql'
+gem 'postgresql_lo_streamer'
 
 group :development, :test do
   gem 'pry-rails'
