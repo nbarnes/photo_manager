@@ -12,4 +12,7 @@ class Photo < ActiveRecord::Base
   has_many :photo_tags
   has_many :tags, through: :photo_tags
 
+  has_many :gallary_photos, :dependent => :destroy
+  has_many :gallaries, :through => :gallary_photos
+
 end

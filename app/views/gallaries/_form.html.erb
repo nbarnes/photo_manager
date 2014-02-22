@@ -1,0 +1,25 @@
+<%= form_for @gallary do |f| %>
+  <% if @gallary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@gallary.errors.count, "error") %> prohibited this gallary from being saved:</h2>
+
+      <ul>
+      <% @gallary.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+  <br />
+
+<% end %>

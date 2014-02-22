@@ -11,7 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140222192555) do
+ActiveRecord::Schema.define(:version => 20140222225224) do
+
+  create_table "gallaries", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "gallary_photos", :force => true do |t|
+    t.integer  "gallary_id"
+    t.integer  "photo_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "gallary_photos", ["gallary_id"], :name => "index_gallary_photos_on_gallary_id"
+  add_index "gallary_photos", ["photo_id"], :name => "index_gallary_photos_on_photo_id"
 
   create_table "photos", :force => true do |t|
     t.datetime "created_at", :null => false
