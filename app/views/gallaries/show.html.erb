@@ -1,9 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Gallary</h2
+<h1>Gallary</h1>
 
-<b>Name:</b><%= @gallary.name %>
+<div>
+  <h2>Name: <%= @gallary.name %></h2>
+</div>
 
+<div id='member_photos'>
+  <% @gallary.photos.each do |photo| %>
+    <%= render "partials/photo", photo: photo %>
+  <% end %>
+</div>
+
+<br />
 <br />
 
 <%= link_to 'Edit', edit_gallary_path(@gallary) %> |

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <%= render "partials/photo", photo: @photo %>
+<br />
+
+Add to gallary:
+
+<% select('@photo', '@photo.id', Gallary.all.collect {|g| [ g.name, g.id ] }, {prompt: 'Select Gallary'}) %>
 
 <br />
 

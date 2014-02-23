@@ -13,6 +13,7 @@ gem 'jquery-rails'
 
 gem 'acts-as-taggable-on'
 gem 'select2-rails'
+gem 'simple_form'
 
 # Image uploading
 gem 'carrierwave'

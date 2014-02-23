@@ -12,3 +12,11 @@
 <div class='photo_tags'><b>Tags:</b>
   <%= photo.tag_list %>
 </div>
+
+<div>
+  <b>Member of gallaries:</b>
+
+  <% photo.gallaries.each do |gallary| %>
+    <%= gallary.name %>
+  <% end %>
+</div>

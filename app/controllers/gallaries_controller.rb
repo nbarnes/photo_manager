@@ -25,7 +25,7 @@ class GallariesController < ApplicationController
   end
 
   def update
-    @gallary = Photo.find(params[:id])
+    @gallary = Gallary.find(params[:id])
 
     if @gallary.update_attributes(params[:gallary])
       redirect_to @gallary, notice: 'Gallary was successfully updated.'

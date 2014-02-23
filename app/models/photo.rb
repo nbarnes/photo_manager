@@ -1,9 +1,9 @@
 class Photo < ActiveRecord::Base
   acts_as_taggable
 
-  default_scope order('created_at ASC')
+  default_scope order('photos.created_at ASC')
 
-  attr_accessible :title, :image, :tag_list
+  attr_accessible :title, :image, :tag_list, :gallaries, :gallary_photos
 
   validates :title, length: { in: 2..255 }
 

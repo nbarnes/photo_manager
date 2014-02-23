@@ -1,5 +1,6 @@
 <h1>Displaying photos</h1>
-
+<%= link_to 'Gallaries', gallaries_path %>
+<br/><br/>
 <% @photos.each do |photo| %>
 
     <%= render "partials/photo", photo: photo %>
@@ -9,5 +10,4 @@
     <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
     <br /><br />
 <% end %>
-
 <%= link_to 'New Photo', new_photo_path %>
