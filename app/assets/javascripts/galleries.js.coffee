@@ -2,4 +2,4 @@
 # All this logic will automatically be available in application.js.
 
 $ ->
-  $('#gallary_photo_ids').select2({'width':'resolve'})
+  $('#gallery_photo_ids').select2({'width':'resolve'})

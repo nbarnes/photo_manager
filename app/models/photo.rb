@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
 
   default_scope order('photos.created_at ASC')
 
-  attr_accessible :title, :image, :tag_list, :gallaries, :gallary_photos
+  attr_accessible :title, :image, :tag_list, :galleries, :gallery_photos
 
   validates :title, length: { in: 2..255 }
 
@@ -12,7 +12,7 @@ class Photo < ActiveRecord::Base
   has_many :photo_tags
   has_many :tags, through: :photo_tags
 
-  has_many :gallary_photos, :dependent => :destroy
-  has_many :gallaries, :through => :gallary_photos
+  has_many :gallery_photos, :dependent => :destroy
+  has_many :galleries, :through => :gallery_photos
 
 end

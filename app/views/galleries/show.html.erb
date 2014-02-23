@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Gallery</h1>
+
+<div>
+  <h2>Name: <%= @gallery.name %></h2>
+</div>
+
+<div id='member_photos'>
+  <% @gallery.photos.each do |photo| %>
+    <%= render "partials/photo", photo: photo %>
+  <% end %>
+</div>
+
+<br />
+<br />
+
+<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
+<%= link_to 'Index', galleries_path %>

@@ -1,5 +1,5 @@
 PhotoManager::Application.routes.draw do
-  resources :gallaries, :photos
+  resources :galleries, :photos
 
   root :to => 'photos#display'
 
