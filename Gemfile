@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0git stuas '
 gem 'rails', '3.2.15'
 
 gem 'pg'
@@ -19,6 +20,10 @@ gem 'simple_form'
 gem 'carrierwave'
 gem 'carrierwave-postgresql'
 gem 'postgresql_lo_streamer'
+
+group :production do
+  gem 'rails_12factor'
+end
 
 group :development, :test do
   gem 'pry-rails'
