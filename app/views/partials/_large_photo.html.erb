@@ -1,0 +1,24 @@
+
+<div class='large_photo_container'>
+
+  <div class='large_photo_title'>
+    <%= photo.title %>
+  </div>
+
+  <div>
+    <% if photo.image != "" %>
+      <%= image_tag photo.image, class: 'large_photo_image' %>
+    <% end %>
+  </div>
+
+  <div class='large_photo_tags'><b>Tags:</b>
+    <%= photo.tag_list %>
+  </div>
+
+  <div>
+    <b>Member of galleries:</b>
+    <% photo.galleries.each do |gallery| %>
+      <%= link_to gallery.name, gallery_path(gallery) %>
+    <% end %>
+  </div>
+</div>

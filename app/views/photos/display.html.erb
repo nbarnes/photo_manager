@@ -3,7 +3,7 @@
 <br/><br/>
 <% @photos.each do |photo| %>
 
-    <%= render "partials/photo", photo: photo %>
+    <%= render "partials/large_photo", photo: photo %>
 
     <%= link_to 'Show', photo %>
     <%= link_to 'Edit', edit_photo_path(photo) %>
