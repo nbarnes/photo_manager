@@ -1,4 +1,3 @@
-
 language: ruby
 rvm:
 - 2.0.0
@@ -7,4 +6,13 @@ script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
 - bundle exec rake
-bundler_args: --binstubs=./bundler_stubs
+bundler_args: "--binstubs=./bundler_stubs"
+deploy:
+  provider: heroku
+  api_key:
+    secure: bYMZZ3tcOnWjGJj2XrGhJCWa9/QvHAJ3HQf2yZRHR/OFjWWKQgLeypJJzKoBV4zV+wnSBEDSwmokSFxWK/1LO9tmDvAkENcUyMvyzezDEOxq2WHPJJft7B34wHAJWt8RfkRufx/mzSa7Tq1R7CjkE1uuYgy4M5dutAD1QszTtAg=
+  app: nbarnes-photo-manager
+  on:
+    repo: nbarnes/photo_manager
+  run:
+    - 'rake db:migrate'
