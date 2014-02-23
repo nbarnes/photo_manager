@@ -8,12 +8,11 @@
 
 <div id='member_photos'>
   <% @gallery.photos.each do |photo| %>
-    <%= render "partials/photo", photo: photo %>
+    <%= render 'partials/gallery_photo', photo: photo %>
   <% end %>
 </div>
 
-<br />
-<br />
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Index', galleries_path %>
+<div class='nav_bar'>
+  <%= link_to 'Edit Gallery', edit_gallery_path(@gallery) %> |
+  <%= link_to 'Galleries Index', galleries_path %>
+</div>

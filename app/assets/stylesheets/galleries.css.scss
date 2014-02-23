@@ -5,3 +5,32 @@
 #gallery_photo_ids {
   width: 450px;
 }
+
+.gallery_photo_container {
+  margin:5px;
+  padding:5px;
+  border:1px solid #0000ff;
+  height:auto;
+  width:auto;
+  float:left;
+  text-align:center;
+}
+
+.gallery_photo_image {
+  display:inline;
+  margin:5px;
+  border:1px solid #ffffff;
+  height:auto;
+  width:auto;
+  max-width:220px;
+}
+
+.gallery_photo_description {
+  text-align:center;
+  font-weight:normal;
+  width:100%;
+}
+
+div.nav_bar {
+  clear:both
+}
