@@ -1,11 +1,22 @@
 <%= render 'partials/header', page_header_title: "Search for '#{ @search_term }'" %>
 
-<h4>Photos:</h4>
+<h2 class='float_clear'>Photos:</h2>
 <% @photos.each do |photo| %>
-  <%= photo.title %>
+  <%= render 'partials/gallery_photo', photo: photo %>
 <% end %>
 
-<h4>Galleries</h4>
+<br/>
+
+<h2 class='float_clear'>Galleries named <%= "#{ @search_term }" %>:</h2>
 <% @galleries.each do |gallery| %>
-  <%= gallery.name %>
+
+  <h3><%= gallery.name %></h3>
+  <% gallery.photos.each do |photo| %>
+    <%= render 'partials/gallery_photo', photo: photo %>
+  <% end %>
+<% end %>
+
+<h2 class='float_clear'>Photos tagged with <%= "#{ @search_term }" %>: </h2>
+<% @photos_with_tag.each do |tagged_photo| %>
+  <%= render 'partials/gallery_photo', photo: tagged_photo %>
 <% end %>
