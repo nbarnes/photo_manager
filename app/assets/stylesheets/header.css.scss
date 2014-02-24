@@ -1,0 +1,22 @@
+
+.page_header {
+  background-color:black;
+  color:white;
+  height:20px;
+  padding:5px;
+}
+
+.page_header_title {
+  font-size:200%;
+  font-weight:bold;
+  float:left;
+}
+
+.header_nav_links {
+  float:right;
+}
+
+.page_header :link {color:white;}
+.page_header :visited {color:white;}
+.page_header :hover {color:grey;}
+.page_header :active {color:grey;}

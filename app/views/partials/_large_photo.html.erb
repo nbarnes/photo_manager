@@ -1,9 +1,6 @@
 
 <div class='large_photo_container'>
 
-  <div class='large_photo_title'>
-    <%= photo.title %>
-  </div>
 
   <div>
     <% if photo.image != "" %>
@@ -11,16 +8,4 @@
     <% end %>
   </div>
 
-  <div class='large_photo_tags'><b>Tags:</b>
-    <% photo.tag_list.each do |tag| %>
-      <%= link_to tag, "/tags/#{ tag }" %>
-    <% end %>
-  </div>
-
-  <div>
-    <b>Member of galleries:</b>
-    <% photo.galleries.each do |gallery| %>
-      <%= link_to gallery.name, gallery_path(gallery) %>
-    <% end %>
-  </div>
 </div>

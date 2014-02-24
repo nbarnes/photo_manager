@@ -10,13 +10,31 @@
 }
 
 .large_photo_title {
-  text-align:center;
+  text-align:left;
   font-weight:normal;
   font-size:x-large;
+  margin-left:5px;
+  margin-bottom:10px;
 }
 
 .large_photo_image {
   margin:5px;
-  max-height:80%;
+  max-height:70%;
   max-width:100%;
+}
+
+.photo_edit_form_title {
+  font-size:150%;
+}
+
+.photo_edit_form_title input[type='text']{
+  font-size:125%;
+}
+
+.photo_edit_form_tags {
+  font-size:150%;
+}
+
+.photo_edit_form_tags input{
+  font-size:125%;
 }

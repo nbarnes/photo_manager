@@ -1,12 +1,10 @@
-<h1>Displaying photos</h1>
-<%= link_to 'Galleries', galleries_path %>
-<br/><br/>
+<%= render 'partials/header', page_header_title: "Photos" %>
+
 <% @photos.each do |photo| %>
 
     <%= render "partials/large_photo", photo: photo %>
 
     <%= link_to 'Show', photo %>
-    <%= link_to 'Edit', edit_photo_path(photo) %>
     <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
     <br /><br />
 <% end %>

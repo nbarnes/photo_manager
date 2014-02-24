@@ -1,9 +1,5 @@
-<%= @tag_name %><br/>
+<%= render 'partials/header', page_header_title: "Photos Tagged '#{ @tag_name }'" %>
+
 <% @photos.each do |photo| %>
   <%= render 'partials/gallery_photo', photo: photo %>
 <% end %>
-
-<div class='nav_bar'>
-  <%= link_to 'Tag list', tags_path %> |
-  <%= link_to 'Front page', root_path %>
-</div>

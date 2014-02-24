@@ -1,10 +1,16 @@
+<%= render 'partials/header', page_header_title: "#{ @photo.title }" %>
 <p id="notice"><%= notice %></p>
 
 <%= render "partials/large_photo", photo: @photo %>
-<br />
+<%= render 'edit_form' %>
+
+<div>
+  <b>Member of galleries:</b>
+  <% @photo.galleries.each do |gallery| %>
+    <%= link_to gallery.name, gallery_path(gallery) %>
+  <% end %>
+</div>
 
 <br />
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Front page', root_path %> |
-<%= link_to 'Photos Index', photos_path %>
+<br />
