@@ -1,4 +1,9 @@
-<% @tagname %><br/>
+<%= @tag_name %><br/>
 <% @photos.each do |photo| %>
   <%= render 'partials/gallery_photo', photo: photo %>
 <% end %>
+
+<div class='nav_bar'>
+  <%= link_to 'Tag list', tags_path %> |
+  <%= link_to 'Front page', root_path %>
+</div>
