@@ -1,0 +1,11 @@
+<%= render 'partials/header', page_header_title: "Search for '#{ @search_term }'" %>
+
+<h4>Photos:</h4>
+<% @photos.each do |photo| %>
+  <%= photo.title %>
+<% end %>
+
+<h4>Galleries</h4>
+<% @galleries.each do |gallery| %>
+  <%= gallery.name %>
+<% end %>

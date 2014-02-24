@@ -13,10 +13,16 @@
 }
 
 .header_nav_links {
-  float:right;
+  float:left;
+  margin-left:20px
 }
 
-.page_header :link {color:white;}
-.page_header :visited {color:white;}
-.page_header :hover {color:grey;}
-.page_header :active {color:grey;}
+.header_nav_links :link {color:white;}
+.header_nav_links :visited {color:white;}
+.header_nav_links :hover {color:grey;}
+.header_nav_links :active {color:grey;}
+
+.search_container {
+  color:white;
+  float:right;
+}

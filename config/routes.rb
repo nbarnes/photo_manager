@@ -7,5 +7,7 @@ PhotoManager::Application.routes.draw do
   get 'tags', to: 'tags#index'
   get 'tags/:tag_name', to: 'tags#show'
 
+  get 'searches', to: 'searches#search'
+
   mount PostgresqlLoStreamer::Engine => "/photo_image"
 end
