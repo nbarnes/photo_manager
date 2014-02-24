@@ -1,1 +1,6 @@
-index.html.erb
+
+
+<% @tags.each do |tag| %>
+  <%= link_to tag.name, "/tags/#{ tag.name }" %>
+  <br/>
+<% end %>

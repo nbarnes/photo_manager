@@ -1,1 +1,4 @@
-show.html.erb
+<% @tagname %><br/>
+<% @photos.each do |photo| %>
+  <%= render 'partials/gallery_photo', photo: photo %>
+<% end %>
