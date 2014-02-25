@@ -21,6 +21,8 @@ gem 'carrierwave'
 gem 'carrierwave-postgresql'
 gem 'postgresql_lo_streamer'
 
+gem 'backbone-on-rails'
+
 group :production do
   gem 'rails_12factor'
 end

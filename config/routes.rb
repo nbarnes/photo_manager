@@ -9,5 +9,8 @@ PhotoManager::Application.routes.draw do
 
   get 'searches', to: 'searches#search'
 
+  match 'testit.json', to: 'json#testit', via: 'post'
+  match 'searches.json', to: 'searches#search', via: 'post'
+
   mount PostgresqlLoStreamer::Engine => "/photo_image"
 end
